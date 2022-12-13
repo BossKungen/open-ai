@@ -4,11 +4,11 @@ import openai
 # Load your API key from an environment variable or secret management service
 openai.api_key = OPENAI_API_KEY
 
-chat = True
-while chat:
+play = True
+while play:
     chat = str(input('Enter your text: '))
     if chat == 'q': 
-        chat = False
+        play = False
     else:
         response = openai.Completion.create(
         model="text-davinci-003",
